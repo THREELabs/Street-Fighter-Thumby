@@ -904,7 +904,10 @@ def main_menu():
              thumby.audio.play(1350, 100)
              arrow_location -= 1
          thumby.display.fill(1)
-         thumby.display.drawLine(2, 38, 69, 38, 0)
+         thumby.display.drawLine(2, 38, 69, 38, 0) #Bottom Line
+         thumby.display.drawLine(2, 1, 70, 1, 0) #Top Line
+         thumby.display.drawLine(1, 1, 1, 38, 0) #Left Line
+         thumby.display.drawLine(70, 1, 70, 38, 0) #Right Line
          thumby.display.setFont("/lib/font8x8.bin", 8, 8, 1)
          thumby.display.drawText('Street', 9, 4, 0)
          thumby.display.drawText('Fighter', 6, 13, 0)
