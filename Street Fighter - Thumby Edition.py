@@ -895,16 +895,19 @@ def main_menu():
      config = None
      while menu == True:
          
-         
+
          
          if thumby.buttonR.pressed() and arrow_location == 0:
+             thumby.audio.play(1350, 100)
              arrow_location += 1
          elif thumby.buttonL.pressed() and arrow_location == 1:
+             thumby.audio.play(1350, 100)
              arrow_location -= 1
          thumby.display.fill(1)
+         thumby.display.drawLine(2, 38, 69, 38, 0)
          thumby.display.setFont("/lib/font8x8.bin", 8, 8, 1)
-         thumby.display.drawText('Street', 9, 1, 0)
-         thumby.display.drawText('Fighter', 6, 10, 0)
+         thumby.display.drawText('Street', 9, 4, 0)
+         thumby.display.drawText('Fighter', 6, 13, 0)
          if arrow_location == 0:
              thumby.display.blit(menu_arrow, 7, 29, 5, 5, 1, 0, 0)
          elif arrow_location == 1:
