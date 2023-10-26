@@ -896,6 +896,8 @@ def main_menu():
      while menu == True:
          
 
+         #thumby.audio.play(1350, 100)
+         #thumby.audio.play(500, 2)
          
          if thumby.buttonR.pressed() and arrow_location == 0:
              thumby.audio.play(1350, 100)
