@@ -1,20 +1,21 @@
-# Street-Fighter: Thumby Edition
+# Street-Fighter:<br>
+Thumby Edition
 
-**Description:**
+**Description:**<br>
 Street Fighter, commonly abbreviated as SF or スト, is a Japanese media franchise centered on a series of fighting video and arcade games developed and published by Capcom. This specific version is for the Thumby handheld console.
 
-**Language:**
+**Language:**<br>
 MicroPython
 
-**Author:**
+**Author:**<br>
 Kevin
 
-**Version:**
+**Version:**<br>
 0.01
 
 **TinyCircuits Game Console:**
 https://tinycircuits.com/products/thumby
 
-**Forked from: **
+**Forked from: **<br>
 Thumby Smash (Author: Sandy)
 
