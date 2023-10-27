@@ -1000,8 +1000,10 @@ def character_select(config):
             else:
                 thumby.display.blit(chars[i][2], (16*int(i-offset)) + 5, 0, 16, 16, 1, 0, 0)
         if thumby.buttonR.pressed() and selected < int(len(chars)-1) :
+            thumby.audio.play(1350, 100)
             selected += 1
         elif thumby.buttonL.pressed() and selected > 0:
+            thumby.audio.play(1350, 100)
             selected -= 1
         elif thumby.buttonB.pressed():
             config = main_menu()
