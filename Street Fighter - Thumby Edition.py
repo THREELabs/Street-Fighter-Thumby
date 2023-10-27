@@ -896,8 +896,10 @@ def main_menu():
      while menu == True:
          
 
-         #thumby.audio.play(1350, 100)
-         #thumby.audio.play(500, 2)
+         thumby.audio.playBlocking( random.randint( 70, 800 ), 58 ) # Music, randomly generated.
+         thumby.audio.stop()
+         
+         
          
          if thumby.buttonR.pressed() and arrow_location == 0:
              thumby.audio.play(1350, 100)
@@ -926,6 +928,7 @@ def main_menu():
          thumby.display.drawText('PLAY', 13, 29, 0)
          thumby.display.drawText('SETUP', 41, 29, 0)
          time.sleep(0.1)
+         
          thumby.display.update()
          thumby.display.fill(1)
      if config == None:
@@ -940,6 +943,10 @@ def character_select(config):
     selected = 0
     offset = 0
     while select_screen == True:
+        
+        thumby.audio.playBlocking( random.randint( 70, 800 ), 58 ) # Music, randomly generated.
+        thumby.audio.stop()
+        
         # BITMAP: width: 16, height: 16
         goggles_icon = bytearray([243,245,246,6,146,108,110,158,158,108,98,22,246,245,243,255,
                 255,255,255,255,254,253,251,251,251,253,254,255,255,255,255,255])
