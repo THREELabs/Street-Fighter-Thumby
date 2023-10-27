@@ -12,7 +12,7 @@ Kevin
 **Version:**<br>
 0.01
 
-**TinyCircuits Game Console:**
+**TinyCircuits Game Console:**<br>
 https://tinycircuits.com/products/thumby
 
 **Forked from: **<br>
