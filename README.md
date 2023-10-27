@@ -15,6 +15,6 @@ Kevin
 **TinyCircuits Game Console:**<br>
 https://tinycircuits.com/products/thumby
 
-**Forked from: **<br>
+**Forked:**<br>
 Thumby Smash (Author: Sandy)
 
