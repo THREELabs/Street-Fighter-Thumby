@@ -789,24 +789,28 @@ def main_menu():
            15,14,13,11,6,6,6,7,11,13,14,15])
          slider = bytearray([127,99,93,0,93,99,127])
          configmenu = True
+         # BITMAP: width: 5, height: 5
          menu_arrow = bytearray([31,31,0,17,27])
          menu = True
          arrow_location = 0
          while configmenu == True:
              if thumby.buttonD.pressed() and arrow_location < 2:
+                 thumby.audio.play(1350, 100)
                  arrow_location += 1
              elif thumby.buttonU.pressed() and arrow_location > 0:
+                 thumby.audio.play(1350, 100)
                  arrow_location -= 1
              thumby.display.fill(1)
-             thumby.display.drawText('AI Config', 0, 0, 0)
-             thumby.display.drawText('Game Config', 0, 8, 0)
-             thumby.display.drawText('Back', 0, 16, 0)
-             if arrow_location == 0:
-                 thumby.display.blit(menu_arrow, 15, 0, 5, 5, 1, 0, 0)
+             thumby.display.setFont("/lib/font5x7.bin", 5, 7, 1)
+             thumby.display.drawText('AI', 23, 3, 0)
+             thumby.display.drawText('Game', 23, 15, 0)
+             thumby.display.drawText('Back', 23, 28, 0)
+             if arrow_location == 0: #Arrow Location on Settings Menu
+                 thumby.display.blit(menu_arrow, 15, 4, 5, 5, 1, 0, 0)
              elif arrow_location == 1:
-                thumby.display.blit(menu_arrow, 15, 8, 5, 5, 1, 0, 0)
-             elif arrow_location == 2:
                 thumby.display.blit(menu_arrow, 15, 16, 5, 5, 1, 0, 0)
+             elif arrow_location == 2:
+                thumby.display.blit(menu_arrow, 15, 29, 5, 5, 1, 0, 0)
              time.sleep(0.1)
              if thumby.buttonA.pressed() and arrow_location == 0:
                  ai_config_menu = True
