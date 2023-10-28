@@ -729,7 +729,7 @@ def singleplayer_battle(char, enemy_char, config):
         thumby.display.fill(1)
         thumby.display.drawRectangle(0, 36, 100, 2, 0)
         p_health_text = str('You:'  + str(p_health))
-        a_health_text = str('Opponent:'  + str(a_health))
+        a_health_text = str('Enemy:'  + str(a_health))
         thumby.display.drawText(str(p_health_text), 0, 0, 0)
         thumby.display.drawText(str(a_health_text), 0, 8, 0)
         c_list = None
@@ -896,7 +896,7 @@ def main_menu():
      while menu == True:
          
 
-         thumby.audio.playBlocking( random.randint( 70, 800 ), 58 ) # Music, randomly generated.
+         thumby.audio.playBlocking( random.randint( 70, 800 ), 35 ) # Music, randomly generated.
          thumby.audio.stop()
          
          
@@ -1011,6 +1011,7 @@ def character_select(config):
             selected += 1
         elif thumby.buttonL.pressed() and selected > 0:
             thumby.audio.play(1350, 100)
+            
             selected -= 1
         elif thumby.buttonB.pressed():
             config = main_menu()
@@ -1034,12 +1035,17 @@ def character_select(config):
             for i in range(3):
                 thumby.display.fill(1)
                 thumby.display.drawText(str(3-i), 30, 15, 0)
+                thumby.audio.play(1350, 100)
                 thumby.display.update()
                 time.sleep(1)
+                thumby.audio.play(1370, 300)
             singleplayer_battle(selected_char, enemy_char, config)
         thumby.display.drawText(chars[selected][0], 10, 25, 0)
+
+        thumby.audio.stop()
         time.sleep(0.1)
         thumby.display.update()
+        
         i = 0
 running = True
 while running == True:
